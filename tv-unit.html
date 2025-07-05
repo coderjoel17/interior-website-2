@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular Tv unit | Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+    }
+    .image-card {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .uniform-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+   margin: 0;
+    }
+    .caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f1f1f1;
+  text-align: justify;
+   margin: 0
+}
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1060;
+  }
+  figure {
+  margin: 0;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+    <center><h2>Modular Tv unit Designs</h2></center>
+    <br>
+    <br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+   <div class="row">
+  <div class="col-md-4">
+    <div class="image-card"></div>
+    <figure>
+      <img src="images/tv 1.jpg" alt="tvunit 1" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A sophisticated and well-appointed Tv in hall, centered around a modern entertainment unit. The wall-mounted television is set against a textured beige accent wall, flanked by two tall, illuminated display shelves filled with books and decorative objects, adding both storage and visual interest. Below the TV, a long, low-profile media console with drawers provides additional storage, and two tall, slender speakers are positioned on either side of the televisionIn the foreground,and sheer curtains grace a window on the left.
+</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/tv 2.jpg" alt="tvunit 2" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Designed with a focus on modern aesthetics and integrated storage. A large wall-mounted television is set against a striking white marble-patterned accent wall. Below the TV, a sleek, low-profile media console combines dark wood and white elements, providing space for entertainment devices.To the left of the television, a custom-built storage unit features a mix of open shelving, closed cabinets in dark wood and white, offering ample space for books and decorative items. Recessed lighting and track lights illuminate the space.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/tv 3.jpg" alt="tvunit 3" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> The wall features a bold color block design, combining a bright orange on the sides with a neutral grey in the center. A sleek white-framed media unit is integrated into the grey section, housing a television and open shelving for media components and decorative items. To the right of the TV, two framed pictures are displayed within the orange section. A stylish brown chaise lounge with a throw pillow sits on a grey rug, accompanied by an orange throw pillow on the floor, adding comfort and a pop of color</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/tv 4.jpg" alt="tvunit 4" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> Centered around a modern entertainment unit set against a dark, textured accent wall. A large wall-mounted television is the focal point, with a floating media console below it featuring a combination of light-colored and wooden finishes, providing storage and space for media devices. Above the TV, a long, illuminated shelf with glass-fronted compartments displays books and decorative objects. To the right,and a glimpse of an adjacent room with light-toned cabinetry is visible.In the foreground,coffee table with a marble top sits on a layered rug. </figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/tv 5.jpg" alt="tvunit 5" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">The wall-mounted television is set against a dark wood panel, which contrasts beautifully with the textured white 3D wall panels behind and to the left. Above the TV, a light beige floating cabinet with open shelving provides additional storage and display space. Below the television, a matching light beige console with closed drawers and open cubbies offers further organization. Two striking yellow vases add a pop of color to the dark wood panel.and a wooden floor with a light-colored rug. completes the modern and inviting ambiance.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/tv 6.jpg" alt="tvunit 6" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">The wall-mounted television is set within a framed, subtly lit marble-effect panel, adding a touch of sophistication. Below it, a sleek, light-colored floating media console with drawers provides storage. Above the TV, a dynamic arrangement of open and closed wall-mounted units in warm terracotta and light beige hues offers display space for books, decorative objects, and framed art. To the left, a large potted Ficus plant adds a fresh green element,contributing to the room's contemporary and inviting ambiance.</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal" onclick="closeImage(event)">
+    <span class="close-btn" onclick="closeImage(event)">&times;</span>
+
+    <img id="fullscreenImage" src="" alt="Full Image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.uniform-img');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.dataset.img;
+        modalDesc.textContent = img.dataset.desc;
+      });
+    });
+    function showImage(src) {
+    const modal = document.getElementById("fullscreenModal");
+    const image = document.getElementById("fullscreenImage");
+    image.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeImage(event) {
+    if (!event || event.target.classList.contains('fullscreen-modal') || event.target.classList.contains('close-btn')) {
+      document.getElementById("fullscreenModal").style.display = "none";
+    }
+  }
+    
+  </script>
+</body>
+</html>

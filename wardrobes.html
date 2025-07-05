@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular wardrobes | Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+    }
+    .image-card {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .uniform-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+   margin: 0;
+    }
+    .caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f1f1f1;
+  text-align: justify;
+   margin: 0
+}
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1060;
+  }
+  figure {
+  margin: 0;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+    <center><h2>Modular wardrobesroom Designs</h2></center>
+    <br>
+    <br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+   <div class="row">
+  <div class="col-md-4">
+    <div class="image-card"></div>
+    <figure>
+      <img src="images/ward 1.jpg" alt="wardrobes 1" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A modern and highly functional bedroom with a prominent full-height wardrobe system. The wardrobe, spanning a large section of the wall, combines sleek off-white glossy panels with warm wood framing, offering extensive storage. Integrated into the wardrobe is a stylish dressing area with a mirror and a small drawer, illuminated by a warm glow. To the left, a comfortable bed with a dark green comforter is set against a wooden headboard accent and a patterned wallpaper above it.
+</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ward 2.jpg" alt="wardrobes 2" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A luxurious and contemporary walk-in closet or wardrobe system, designed with transparent glass doors that reveal illuminated interiors. The dark-framed glass doors enclose various compartments with warm wooden finishes, displaying neatly organized clothing, bags, and accessories. The internal lighting highlights the contents, creating a boutique-like display. A comfortable upholstered ottoman with a throw blanket sits in the foreground, suggesting a comfortable space for dressing.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ward 3.jpg" alt="wardrobes 3" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A highly practical and modern multi-functional room, likely a bedroom or study, designed for efficiency and style. On the left, a integrated study area consists of a white desk with a yellow task lamp, a white ergonomic chair, and ample open shelving above for books, decorative items, and office supplies. To the right, a spacious wardrobe with a light wood grain finish and white accents is partially open, revealing illuminated compartments with hanging space for clothes.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ward 4.jpg" alt="wardrobes 4" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A classic and sophisticated full-wall wardrobe system in a dark charcoal or grey finish, featuring traditional paneling and elegant brass knobs. The central section of the wardrobe cleverly incorporates an entertainment unit, with bi-fold doors that open to reveal a television, shelves, and drawers, along with a top compartment for luggage or other large items. This design allows the TV to be hidden when not in use, maintaining a clean and cohesive aesthetic.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ward 5.jpg" alt="wardrobes 5" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A highly organized and spacious open wardrobe system crafted from warm-toned wood, presenting a clean and minimalist aesthetic. The modular design features multiple compartments with various configurations: long hanging rails for full-length garments, shorter rails for shirts and blouses, numerous open shelves for folded clothes and accessories, and pull-out drawers for smaller items.are meticulously arranged, emphasizing the system's capacity and efficient use of space.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ward 6.jpg" alt="wardrobes 6" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A luxurious and spacious walk-in closet or dressing room, characterized by dark wood cabinetry and integrated lighting. The U-shaped layout features extensive open shelving, hanging rods, and pull-out drawers, all neatly displaying a wide array of clothing, shoes, and accessories. Overhead lighting illuminates each section, while sleek black boxes on the top shelves add to the organized aesthetic. In the center of the room, a large, light wood island with a dark trim provides additional storage.</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal" onclick="closeImage(event)">
+    <span class="close-btn" onclick="closeImage(event)">&times;</span>
+
+    <img id="fullscreenImage" src="" alt="Full Image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.uniform-img');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.dataset.img;
+        modalDesc.textContent = img.dataset.desc;
+      });
+    });
+    function showImage(src) {
+    const modal = document.getElementById("fullscreenModal");
+    const image = document.getElementById("fullscreenImage");
+    image.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeImage(event) {
+    if (!event || event.target.classList.contains('fullscreen-modal') || event.target.classList.contains('close-btn')) {
+      document.getElementById("fullscreenModal").style.display = "none";
+    }
+  }
+    
+  </script>
+</body>
+</html>

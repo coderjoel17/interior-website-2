@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular living room| Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+    }
+    .image-card {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .uniform-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+   margin: 0;
+    }
+    .caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f1f1f1;
+  text-align: justify;
+   margin: 0
+}
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1060;
+  }
+  figure {
+  margin: 0;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+    <center><h2>Modular Livingroom Designs</h2></center>
+    <br>
+    <br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+   <div class="row">
+  <div class="col-md-4">
+    <div class="image-card"></div>
+    <figure>
+      <img src="images/liv 1.jpg" alt="living 1" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Contemporary living room with an open-plan layout, characterized by a vibrant yet harmonious color palette. Two distinct seating areas are present: one features a large teal sofa with a view towards the TV unit and a tall, geometrically-designed white bookshelf with teal accents; the other includes a lighter-colored sofa with blue accent pillows, centered around a white coffee table and illuminated by modern hanging pendant lights.all contributing to a stylish and inviting atmosphere.
+</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/liv 2.jpg" alt="living 2" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Modern Indian living room with a sophisticated and well-designed interior. Key features include a wall-mounted television unit with white and wood accents, next to a mirrored sliding door that likely leads to another room. A prominent dark wood display unit with intricate geometric patterns and decorative items serves as a focal point. The room also includes a built-in wooden bench with a blue cushion, contemporary ceiling designs with recessed lighting and track lights, and a stylish ceiling fan.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/liv 3.jpg" alt="living 3" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> A luxurious and elegantly furnished living room, dominated by a sophisticated neutral color palette of creams, beiges, and grays. The main seating area features two plush sofas, a central round coffee table, and a unique round ottoman, all arranged on a large, multi-toned circular rug. The accent wall behind the longer sofa is adorned with stylish wall sconces,a large ornate mirror, decorative shelving with various accents, and built-in bookshelves on either side, adding to the room's refined ambiance.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/liv 4.jpg" alt="living 4" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> A richly decorated living room, blending classic and modern elements. A prominent traditional sofa with carved wooden accents and plush grey upholstery, adorned with ornate cushions, faces a contemporary wall-mounted television. The TV is set against a luxurious marble-patterned panel, framed by a textured wall with subtle lighting, creating a focal point. A glass-top coffee table with a unique base sits on a light-colored, patterned rug. </figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/liv 05.png" alt="living 5" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A meticulously designed modern living room with a strong focus on the entertainment area. A large wall-mounted television is the centerpiece, flanked by two tall, illuminated display shelves filled with books and decorative objects. Below the television, a long, low media console with ample storage provides a sleek base. The wall behind the TV features a textured panel with subtle vertical gold accents, adding a touch of elegance.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/liv 6.jpg" alt="living 6" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A modern and inviting living room, centered around a stylish entertainment wall.two-toned media console with ample storage and decorative elements. Above the TV, a minimalist floating shelf holds decorative items, and to its left, a modular wall unit with glossy white and dark wood finishes provides additional storage and display space. The wall itself is a muted gray, complemented by warm lighting from recessed ceiling lights and two framed artworks.</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal" onclick="closeImage(event)">
+    <span class="close-btn" onclick="closeImage(event)">&times;</span>
+
+    <img id="fullscreenImage" src="" alt="Full Image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.uniform-img');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.dataset.img;
+        modalDesc.textContent = img.dataset.desc;
+      });
+    });
+    function showImage(src) {
+    const modal = document.getElementById("fullscreenModal");
+    const image = document.getElementById("fullscreenImage");
+    image.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeImage(event) {
+    if (!event || event.target.classList.contains('fullscreen-modal') || event.target.classList.contains('close-btn')) {
+      document.getElementById("fullscreenModal").style.display = "none";
+    }
+  }
+    
+  </script>
+</body>
+</html>

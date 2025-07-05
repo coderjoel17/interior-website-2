@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular Kitchen | Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+    }
+    .image-card {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .uniform-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+   margin: 0;
+    }
+    .caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f1f1f1;
+  text-align: justify;
+   margin: 0
+}
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1060;
+  }
+  figure {
+  margin: 0;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+    <center><h2>Modular Kitchen Designs</h2></center>
+    <br>
+    <br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+   <div class="row">
+  <div class="col-md-4">
+    <div class="image-card"></div>
+    <figure>
+      <img src="images/kit 1.jpg" alt="Kitchen 1" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Modern L-shaped kitchen featuring a striking color palette of dusty blue lower cabinets, crisp white upper cabinets, and a dark countertop. The design efficiently integrates a gas cooktop with a sleek chimney hood and a built-in microwave, complemented by open wooden shelving. A subtly patterned backsplash and bright floor complete the look — stylish and functional.The kitchen is well-equipped with a microwave and various storage solutions, creating a modern and functional space.
+</figcaption>
+
+    </figure>
+    <br>
+<br>
+  </div>
+  
+  <div class="col-md-4">
+    <figure>
+      <img src="images/kit 2.jpeg" alt="Kitchen 2" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">The L-shaped layout includes a double sink beneath a large window with security bars, a built-in cooktop, and an overhead range hood, with ample storage provided by both upper and lower cabinets, some of which have slatted fronts. The kitchen is well-equipped with various utensils and dishes, suggesting a functional and inviting space, some of which have slatted fronts. The kitchen is well-equipped with various utensils and dishes, suggesting a functional and inviting space.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/kit 3.jpg" alt="Kitchen 3" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> A modern kitchen with a striking two-toned design, predominantly featuring rich maroon and clean white cabinetry. The L-shaped layout includes both upper and lower cabinets, some with contrasting white doors, a double sink beneath a window, and a built-in hob with an overhead chimney. The kitchen is well-organized with various racks for dishes and utensils, and the dark countertops provide a sleek contrast to the cabinetry, creating a stylish and functional cooking space.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/kit 05.jpg" alt="Kitchen 4" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> A modern and sophisticated kitchen, prominently featuring sleek grey cabinetry that extends from base units to upper cabinets, including an integrated range hood. A large, double-door stainless steel refrigerator stands tall, complementing the other stainless steel appliances like the gas range. The countertops are a pristine white, providing a bright contrast to the grey, and the backsplash behind the stove is a textured white tile with a subtle pattern. </figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/kit 5.jpg" alt="Kitchen 5" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A stylish kitchen boasting a distinctive and elegant design, characterized by its muted green cabinetry with gold hardware. The L-shaped layout incorporates a sink beneath a window with a natural wood blind, and a hob with an integrated chimney. A prominent marble-patterned backsplash extends to the upper cabinets, which include some open wooden shelving for display, all under warm under-cabinet lighting, creating a sophisticated and inviting culinary space.</figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    <figure>
+      <img src="images/kit 6.jpg" alt="Kitchen 6" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">A minimalist and modern kitchen with a clean, linear design, featuring sleek white handleless cabinetry that extends from floor to ceiling for ample storage. The kitchen is equipped with integrated stainless steel appliances, including an oven, microwave, dishwasher, and a double-door refrigerator.A light-colored,subtly veined backsplash complements the white countertops,creating a bright and uncluttered aesthetic,he cabinetry is a light.</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal" onclick="closeImage(event)">
+    <span class="close-btn" onclick="closeImage(event)">&times;</span>
+
+    <img id="fullscreenImage" src="" alt="Full Image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.uniform-img');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.dataset.img;
+        modalDesc.textContent = img.dataset.desc;
+      });
+    });
+    function showImage(src) {
+    const modal = document.getElementById("fullscreenModal");
+    const image = document.getElementById("fullscreenImage");
+    image.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeImage(event) {
+    if (!event || event.target.classList.contains('fullscreen-modal') || event.target.classList.contains('close-btn')) {
+      document.getElementById("fullscreenModal").style.display = "none";
+    }
+  }
+    
+  </script>
+</body>
+</html>

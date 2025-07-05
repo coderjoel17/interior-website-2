@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modular kids bedroom | Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 100%;
+    }
+    .image-card {
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+    .uniform-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+   margin: 0;
+    }
+    .caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f1f1f1;
+  text-align: justify;
+   margin: 0
+}
+  .fullscreen-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullscreen-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1060;
+  }
+  figure {
+  margin: 0;
+  text-align: center;
+}
+
+.caption {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
+
+  </style>
+</head>
+<body>
+   <div class="container">
+    <center><h2>Modular kids bedroom Designs</h2></center>
+    <br>
+    <br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+   <div class="row">
+    
+  <div class="col-md-4">
+    <div class="image-card"></div>
+    <figure>
+      <img src="images/ki 1.jpg" alt="kidbed 1" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Playful children's bedroom, optimized for both sleep and study. On the right, a sturdy white bunk bed is integrated into a wooden-paneled wall, complete with built-in shelves displaying various decorative items and a small chalkboard easel. The lower bunk features drawers for extra storage. To the left, a dedicated study area includes a long wooden desk with a white chair, open shelving above in a mix of wood and white, and a green accent wall behind it,a cozy window nook with cushions and hanging pendant lights.
+</figcaption>
+    </figure>
+  </div>
+
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ki 2.jpg" alt="kidbed 2" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Cheerful girl's bedroom, dominated by a vibrant pink and white color scheme. The room features a white bed with a pink frame and headboard, dressed in a blue comforter and colorful pillows, with a "Hello Kitty" rug at its base. To the left, a tall white wardrobe with pink paneling and heart cutouts provides storage. In the center, a white desk area with pink drawers and an accompanying chair is set against the wall, with open shelving above. Large windows are adorned with sheer pink curtains.</figcaption>
+    </figure>
+  </div>
+
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ki 3.jpg" alt="kidbed 3" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> Dominated by a blue and white themed bunk bed. The sturdy bunk bed features blue and white striped panels and a matching ladder, with built-in shelves on both bunks for books and small items. The lower bunk has integrated drawers for storage. In the background, hints of other colorful areas suggest an open-plan play space, with a second bed, beanbag chairs, and a colorful storage unit. The overall impression is one of a cheerful, organized, and functional room designed for children.</figcaption>
+    </figure>
+  </div>
+
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ki 4.jpg" alt="kidbed 4" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption"> The centerpiece is a large bed with a high, plush, upholstered headboard in a rich plum or burgundy color. Behind it, an accent wall features a striking geometric pattern of gold lines against a dark teal or emerald green background, illuminated from above. To the left of the bed, a cozy light blue armchair with a side table and a tall floor lamp creates a reading nook, while on the right, a dark, glass-fronted wardrobe with interior lighting adds a touch of modern sophistication. The room is further enhanced by round bedside lamps, a dramatic spherical chandelier, and a soft, light-colored rug. </figcaption>
+    </figure>
+  </div>
+
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ki 5.jpg" alt="kidbed 5" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">Children's bedroom,designed with a predominant blue and light wood color scheme, perfect for multiple occupants. The room features a sturdy bunk bed with a modern design, including integrated shelving and drawers in the lower bunk for storage. To the left of the bunk beds, a dedicated study area includes a desk with a blue chair and a wall-mounted unit combining open shelves and closed cabinets. On the right, a large, full-height blue wardrobe offers extensive storage, seamlessly blending with an open shelving unit in a light wood finish,The walls are adorned with nautical-themed artwork.</figcaption>
+    </figure>
+  </div>
+  
+  <div class="col-md-4">
+    <figure>
+      <img src="images/ki 6.jpg" alt="kidbed 6" class="uniform-img" onclick="showImage(this.src)">
+      <figcaption class="caption">The central feature is a custom-built bunk bed structure in a cheerful blue and white, with an upper bunk featuring a decorative "roof" in orange and yellow, creating a cozy fort-like feel. The lower bed has a trundle bed underneath, maximizing sleeping capacity. Integrated into the structure are shelves for books and toys, and a string of hanging decorations. To the left, a multi-level storage unit with drawers in shades of teal, orange, and white also functions as steps for the bunk bed. A large window on the right is adorned with a colorful, patterned curtain, and the room is further enhanced by framed artwork,..</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="fullscreen-modal" onclick="closeImage(event)">
+    <span class="close-btn" onclick="closeImage(event)">&times;</span>
+
+    <img id="fullscreenImage" src="" alt="Full Image">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const galleryImages = document.querySelectorAll('.uniform-img');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.dataset.img;
+        modalDesc.textContent = img.dataset.desc;
+      });
+    });
+    function showImage(src) {
+    const modal = document.getElementById("fullscreenModal");
+    const image = document.getElementById("fullscreenImage");
+    image.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeImage(event) {
+    if (!event || event.target.classList.contains('fullscreen-modal') || event.target.classList.contains('close-btn')) {
+      document.getElementById("fullscreenModal").style.display = "none";
+    }
+  }
+    
+  </script>
+</body>
+</html>

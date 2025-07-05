@@ -1,0 +1,20 @@
+setup details
+
+service id:  service_9grkf4s
+public id:   GU-8HEKaM5-KcODG3
+template id: template_sm12ypy
+
+
+
+template setup
+
+subject: 
+New Message from {{from_name}}
+
+content:
+You received a new message from the website contact form:
+
+Name: {{user_name}}
+Email: {{user_email}}
+Message: {{message}}
+

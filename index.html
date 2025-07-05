@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream House Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="/images/logo.png.jpg">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+.hero {
+  background: url('images/back 10.jpg') center center/cover no-repeat;
+  color: white;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+  z-index: -1;
+}
+
+
+
+.hero h1, .hero p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  
+}
+
+.hero h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  animation-delay: 0.3s;
+  font-style: italic;
+}
+
+.hero p {
+  font-weight: 500;
+  animation-delay: 0.6s;
+  font-style: italic;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+}
+
+
+     .service-img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card:hover .service-img {
+    transform: scale(1.05);
+  }
+  .uniform-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .uniform-img:hover {
+      transform: scale(1.02);
+    }
+    .social-icons img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    .star {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: gold;
+}
+
+    
+    
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    #previewImage {
+      display: none;
+      max-height: 150px;
+      border-radius: 6px;
+    }
+    .review-img {
+      max-width: 150px;
+      border-radius: 6px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize with your EmailJS Public Key
+  emailjs.init("GU-8HEKaM5-KcODG3");
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_9grkf4s", "template_sm12ypy", "#contact-form")
+      .then(() => {
+        alert("Message sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Failed to send message:", error);
+        alert("Failed to send message.");
+      });
+  }
+</script>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="container">
+    <img src="images/logo_transparent.png" alt="Logo" width="40" height="200" class="me-2"style= "width:200px">
+    <h1 class="display-4 fw-bold">DREAM HOUSE INTERIORS</h1>
+    <p class="lead">Interior design with heart, expertise, and vision.</p>
+    <a href="#services" class="btn btn-light mt-3">View Services</a>
+  </div>
+</section>
+
+
+
+
+<!-- Portfolio -->
+<section id="portfolio" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Portfolio</h2>
+    <p style="color:grey;text-align: justify;padding-left: 50px;padding-right: 50px;"> Our latest interior works in Chennai exemplify a seamless fusion of contemporary aesthetics and practical functionality, transforming residential spaces into havens of style and comfort. These projects feature bespoke solutions, including elegant sliding wardrobes with integrated lighting, sophisticated media consoles crafted from a harmonious blend of rich wood and pristine white finishes, and innovative false ceilings that incorporate ambient lighting and striking design elements.Every detail, from the selection of premium materials like polished marble flooring and luxurious wall panels to the thoughtful creation of inviting study nooks and stylish entryways, is meticulously executed to deliver highly personalized and visually stunning interiors that cater to the modern homeowner's lifestyle.
+Our latest interior works projects in Chennai showcase a harmonious blend of modern aesthetics and highly functional design, capturing the contemporary spirit of urban living while incorporating timeless elegance. We specialize in creating bespoke spaces, from ingenious storage solutions like sleek sliding wardrobes and integrated media units that blend seamlessly with elegant finishes, to sophisticated false ceilings and well-appointed study areas. Each project reflects our commitment to meticulous craftsmanship, utilizing a palette of warm wood tones, pristine whites, and reflective surfaces to craft environments that are not only visually stunning but also maximize space and enhance daily living.
+</p>
+    <br><br>
+    <center><p style="font-size:19px;"> Click the image to view in full screen</p></center>
+
+    <div class="row g-4">
+      <!-- Repeat for each image -->
+      <div class="col-md-4">
+        <img src="images/img 1.jpg" class="img-fluid uniform-img" alt="Project 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 2.jpg" class="img-fluid uniform-img" alt="Project 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 3.jpg" class="img-fluid uniform-img" alt="Project 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 5.jpg" class="img-fluid uniform-img" alt="Project 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 6.jpg" class="img-fluid uniform-img" alt="Project 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 7.jpg" class="img-fluid uniform-img" alt="Project 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 8.jpg" class="img-fluid uniform-img" alt="Project 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 9.jpg" class="img-fluid uniform-img" alt="Project 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 10.jpg" class="img-fluid uniform-img" alt="Project 9" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 11.jpg" class="img-fluid uniform-img" alt="Project 10" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 12.jpg" class="img-fluid uniform-img" alt="Project 11" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 13.jpg" class="img-fluid uniform-img" alt="Project 12" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 14.jpg" class="img-fluid uniform-img" alt="Project 13" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 15.jpg" class="img-fluid uniform-img" alt="Project 13" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+      <div class="col-md-4">
+        <img src="images/img 16.jpg" class="img-fluid uniform-img" alt="Project 13" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="showImage(this)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0 position-relative">
+
+      <!-- ❌ Close Button -->
+      <button onclick="closeModal()" aria-label="Close"
+        style="position: fixed; top: 20px; right: 20px; z-index: 1056; background: white; color: black; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 18px; box-shadow: 0 0 6px rgba(0,0,0,0.2); cursor: pointer;"
+        onmouseover="this.style.background='crimson'; this.style.color='white';"
+        onmouseout="this.style.background='white'; this.style.color='black';">
+        ×
+      </button>
+
+      <!-- ✅ Navigation Buttons -->
+      <button id="prevBtn" onclick="navigateImage(-1)" class="nav-btn"
+        style="position: fixed; top: 50%; left: 20px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; z-index: 1055; cursor: pointer;">
+        ‹
+      </button>
+      <button id="nextBtn" onclick="navigateImage(1)" class="nav-btn"
+        style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; z-index: 1055; cursor: pointer;">
+        ›
+      </button>
+
+      <!-- ✅ Modal Image -->
+      <div class="modal-body d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <img id="modalImage" src="" class="rounded" style="width: 800px; height: 500px; object-fit: cover;">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const imageElements = document.querySelectorAll('.uniform-img');
+  let currentIndex = -1;
+
+  function showImage(element) {
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = element.src;
+    modalImage.alt = element.alt;
+    currentIndex = Array.from(imageElements).indexOf(element);
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('lightboxModal');
+    const bsModal = bootstrap.Modal.getInstance(modal);
+    if (bsModal) {
+      bsModal.hide();
+    }
+  }
+
+  function navigateImage(direction) {
+    if (currentIndex === -1) return;
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = imageElements.length - 1;
+    if (currentIndex >= imageElements.length) currentIndex = 0;
+
+    const newImage = imageElements[currentIndex];
+    showImage(newImage);
+  }
+</script>
+
+
+<!-- Services -->
+<section id="services" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+      <center><h3 style="font-size:38px;font-weight: bold;font-style: italic"> "DESIGN YOUR DREAMS,THE WAY YOU WANT" </h3></center>
+    <p style="color:grey;text-align: justify;padding-left: 50px;padding-right: 50px;"> House interior design is a creative and functional process that turns empty spaces into warm, inviting, and purposeful living environments. It encompasses everything from space planning, furniture layout, and lighting to color coordination, textures, and material selection. A well-designed interior enhances the flow and usability of each room while reflecting the unique personality, preferences, and lifestyle of the homeowner. Whether it’s creating a cozy bedroom retreat, a vibrant living room for gatherings, a sleek modular kitchen, or a serene pooja space, every element is thoughtfully curated to ensure balance, harmony, and comfort. Modern house interior design also focuses on sustainability, smart storage solutions, and maximizing natural light, resulting in homes that are not just beautiful to look at but also practical to live in. The goal is to make every space feel cohesive, emotionally satisfying, and timeless.Offering both visual delight and functional excellence.</p>
+<p style="color:grey;text-align: justify;padding-left: 50px;padding-right: 50px;">It enhances spatial efficiency, improves mood and productivity, and allows for seamless movement and interaction. With growing attention to detail, sustainability, and innovation, house interiors today incorporate modular solutions, smart technologies, and eco-friendly materials. Ultimately, interior design transforms a house into a home,a sanctuary that nurtures both body and spirit, tailored perfectly to the people who live within it.Living rooms become hubs of interaction and comfort, bedrooms transform into havens of peace, kitchens are made efficient yet stylish, and every niche is optimized with storage and utility in mind. Modern house interior design also emphasizes sustainability by incorporating eco-conscious materials, energy-saving lighting, and environmentally friendly practices. Smart technologies are seamlessly integrated, from automated lighting systems to space-saving furniture, ensuring that homes remain future-ready. More than just enhancing visual appeal, good interior design fosters emotional well-being, supports practical living, and adds long-term value to the property. It is the subtle art of balancing beauty and function creating spaces that tell a story, evoke a feeling, and most importantly, feel like home.</p>
+    <br><br>
+    <center><p style="font-size:19px;"> Click the image and choose your designs</p></center>
+
+    <div class="row g-4">
+
+  <div class="col-md-4">
+    <a href="modular-kitchen.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/Kitchen.jpg" class="card-img-top service-img" alt="Modular Kitchen">
+        <div class="card-body">
+          <h5 class="card-title text-center">Modular Kitchen</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="living.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/living.jpg" class="card-img-top service-img" alt="Living Room">
+        <div class="card-body">
+          <h5 class="card-title text-center">Living Room</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="bedroom.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/bedroom.jpg" class="card-img-top service-img" alt="Bedroom">
+        <div class="card-body">
+          <h5 class="card-title text-center">Bedroom</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="crockery.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/dining.jpg" class="card-img-top service-img" alt="Crockery">
+        <div class="card-body">
+          <h5 class="card-title text-center">Crockery</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="pooja.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/pooja.jpg" class="card-img-top service-img" alt="Pooja">
+        <div class="card-body">
+          <h5 class="card-title text-center">Pooja</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="foyer.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/foyer.jpg" class="card-img-top service-img" alt="Foyer">
+        <div class="card-body">
+          <h5 class="card-title text-center">Foyer</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="wardrobes.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/ward.jpg" class="card-img-top service-img" alt="Wardrobes">
+        <div class="card-body">
+          <h5 class="card-title text-center">Wardrobes</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="tv-unit.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/tv.jpg" class="card-img-top service-img" alt="TV Unit">
+        <div class="card-body">
+          <h5 class="card-title text-center">TV Unit</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="kids-bedroom.html" class="text-decoration-none text-dark">
+      <div class="card h-100">
+        <img src="images/ki.jpg" class="card-img-top service-img" alt="Kids Bedroom">
+        <div class="card-body">
+          <h5 class="card-title text-center">Kids Bedroom</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About us</h2>
+    <center>
+      <img src="images/back 8.jpg" class="img-fluid rounded" alt="Project 1" style="width:2500px;" >
+      <br>
+      <br>
+     
+      <p>It all started from the dream to become an entrepreneur.</p>
+      <p>Dream House Interiors was founded by Inbaraja,</p>
+      <p>who had experience in this industry for about 15 years.</p>
+      <p>Very well experienced in every aspect of this field,</p>
+      <p>offering a happy experience to homeowners ensuring fair price and quality.</p>
+      <p style="font-size: 23px; font-weight: bold; font-style: italic;">Your Dream homes, We Deliver.</p></center>
+    </p>
+  </div>
+
+
+<!-- Contact -->
+<section id="contact" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact</h2>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <form id="contact-form" onsubmit="sendEmail(event)">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" name="user_name" id="name" class="form-control" placeholder="Your name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="user_email" id="email" class="form-control" placeholder="Your email" required>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea id="message" name="message" rows="4" class="form-control" placeholder="Your message" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-dark">Send Message</button>
+</form>
+      </div>
+      <div class="col-md-6">
+        
+        <div class="social-icons mt-3">
+          <div class="col-md-6">
+        <center><p><strong>Email:</strong>rajadreamhouseinteriors@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9345847264</p>
+        <a href="https://maps.app.goo.gl/8nKLrgKZGtsfmkSY7?g_st=aw" target="_blank"><img src="images/loc 1.jpg" class="img-fluid rounded" alt="location" style="width: 200px;"></a>
+        <p><strong>Location</strong></p></center>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Customer Reviews</h2>
+<form id="reviewForm" enctype="multipart/form-data" class="mb-5 bg-white p-4 rounded shadow-sm">
+      <div class="mb-3">
+        <label for="reviewerName" class="form-label">Name</label>
+        <input type="text" id="reviewerName" class="form-control" required placeholder="Your name">
+      </div>
+      <div class="mb-3">
+        <label for="reviewText" class="form-label">Review</label>
+        <textarea id="reviewText" class="form-control" rows="3" required placeholder="Your review"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Rating</label><br>
+        <div id="starRating">
+          <i class="fas fa-star star" data-value="1"></i>
+          <i class="fas fa-star star" data-value="2"></i>
+          <i class="fas fa-star star" data-value="3"></i>
+          <i class="fas fa-star star" data-value="4"></i>
+          <i class="fas fa-star star" data-value="5"></i>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="reviewImages" class="form-label">Upload images (you can select multiple)</label>
+        <input type="file" id="reviewImages" class="form-control" accept="image/*" multiple>
+        <div id="previewImages" class="d-flex flex-wrap mt-2"></div>
+      </div>
+      <button type="submit" class="btn btn-dark">Submit Review</button>
+    </form>
+
+    <h3 class="mb-4">Reviews</h3>
+    <div id="reviewList" class="border-top pt-4"></div>
+  </div>
+
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="social-icons mt-3">
+          <a href="#" onclick="openMail(event)"><img src="images/gmail.png" alt="Gmail"></a>
+          <a href="https://www.instagram.com/dreamhouseInteriorsp/"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com/18tV3UR3An/"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/919345847264" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://maps.app.goo.gl/8nKLrgKZGtsfmkSY7?g_st=aw" target="_blank"><img src="images/google-maps.png" alt="location"></a>
+        </div>
+        
+   
+</footer>
+<script>
+  function openMail(event) {
+    event.preventDefault(); // prevents page jump
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    const email = "rajadreamhouseinterior@gmail.com";
+    const subject = "Interior Design Enquiry";
+    const body = `Hi Dream House Interiors,%0D%0AI am interested in your interior design services.%0D%0APlease contact me back.%0D%0AThank you!`;
+
+    if (isMobile) {
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    } else {
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, '_blank');
+    }
+  }
+  </script>
+<script>
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+    const stars = document.querySelectorAll('.star');
+    const imageInput = document.getElementById('reviewImages');
+    const previewImagesContainer = document.getElementById('previewImages');
+
+    let selectedRating = 0;
+    let selectedImages = [];
+
+    // Star rating selection
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = parseInt(star.getAttribute('data-value'));
+        stars.forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i < selectedRating; i++) {
+          stars[i].classList.add('selected');
+        }
+      });
+    });
+
+    // Convert selected images to base64
+    imageInput.addEventListener('change', () => {
+      selectedImages = [];
+      previewImagesContainer.innerHTML = '';
+      const files = Array.from(imageInput.files);
+
+      files.forEach(file => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          selectedImages.push(e.target.result);
+
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.className = 'review-img';
+          previewImagesContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    // Load reviews from localStorage
+    function loadReviews() {
+      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+      reviewList.innerHTML = '';
+
+      if (reviews.length === 0) {
+        reviewList.innerHTML = '<p class="text-muted">No reviews yet. Be the first!</p>';
+        return;
+      }
+
+      reviews.forEach((review, index) => {
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('mb-4', 'border-bottom', 'pb-3');
+
+        const imageHTML = review.images.map(img =>
+  `<img src="${img}" class="review-img" onclick="showReviewImage(this)">`
+).join('');
+
+
+        reviewItem.innerHTML = `
+          <h5>${review.name}</h5>
+          <div>${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+          <p class="text-muted fst-italic">${review.text}</p>
+          <div class="d-flex flex-wrap">${imageHTML}</div>
+          <br>
+          
+        `;
+        reviewList.appendChild(reviewItem);
+      });
+    }
+
+    
+
+    reviewForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('reviewerName').value.trim();
+      const text = document.getElementById('reviewText').value.trim();
+
+      if (!name || !text || selectedRating === 0) {
+        alert('Please fill all fields and select a rating.');
+        return;
+      }
+
+      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+      reviews.unshift({
+        name,
+        text,
+        rating: selectedRating,
+        images: selectedImages
+      });
+
+      localStorage.setItem('reviews', JSON.stringify(reviews));
+
+      reviewForm.reset();
+      stars.forEach(s => s.classList.remove('selected'));
+      selectedRating = 0;
+      selectedImages = [];
+      previewImagesContainer.innerHTML = '';
+
+      loadReviews();
+      alert('Thank you for your review!');
+    });
+function showReviewImage(element) {
+  const modalImage = document.getElementById('modalImage');
+  modalImage.src = element.src;
+  modalImage.alt = "Review Image";
+  currentIndex = -1; // disable next/prev for review images
+  const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+  modal.show();
+}
+
+    document.addEventListener('DOMContentLoaded', loadReviews);
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
